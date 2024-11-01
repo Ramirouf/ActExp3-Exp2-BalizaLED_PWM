@@ -94,8 +94,8 @@ void confTIMERS(){
 	OCR0A  = 82;					// TOP en 82.
   8e:	82 e5       	ldi	r24, 0x52	; 82
   90:	87 bd       	out	0x27, r24	; 39
-	OCR0B  = 41;					// Valor del ciclo útil.
-  92:	89 e2       	ldi	r24, 0x29	; 41
+	OCR0B  = 82 * 0.75;				// Valor del ciclo útil. Indicado en el multiplicador del periodo.
+  92:	8d e3       	ldi	r24, 0x3D	; 61
   94:	88 bd       	out	0x28, r24	; 40
   96:	08 95       	ret
 
